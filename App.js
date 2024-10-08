@@ -1,42 +1,82 @@
 import React from "react";
+import ReactDOM from "react-dom/client";
 
-import ReactDOM from "react-dom/client"
+// React Element => creates an object
+// const heading = React.createElement("h1", {}, "heading from react element");
 
+// const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const parent = React.createElement(
-    'div',
-     {},[
-        React.createElement("div", {id: "child1"}, [
-            React.createElement("h1", {}, "this is from namaste react"),
-            React.createElement("h2", {}, "I am h2 tag"),
-        ]),
-        React.createElement("div", {id:"child2"}, [
-            React.createElement("h1", {}, "I am h1 tag"),
-            React.createElement("h2", {}, "I am h2 tag"),
-        ])
-     ]
-    )   
+// // when we render onto DOM => becomes HTML element
+// // root.render(heading);
 
-    console.log(parent)
-    console.log(parent.props)
+// const jsxHeading = <h1> this is JSX heading</h1>
 
+// console.log('heading: ', heading);
+// console.log('jsx : ',jsxHeading);
 
-// const header = React.createElement("h1", {id: "header", xyz:"abc"}, "I am from header")
+// root.render(jsxHeading)
 
-// console.log(header)
+// console.log('heading: ', heading);
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
+// console.log("root: ", root);
 
+// const heading =(
+//     <h1 className="heading">React heading element 2</h1>
+// )
 
-// root.render(header);
+// const HeadingComponent = () =>{
+//     return <h1>Heading functional component</h1>
+// }
 
-root.render(parent);
+// const HeadingComponent2 = () => <h1>Heading functional component 2</h1>
 
-
-
-
+// const HeadingComponent3 = () => (
+//     <h1 className="heading">Heading functional component 3</h1>
+// )
 
 
+// JSX 
+// const headingElement = <h1>React Heading Element</h1>
+
+// const TitleComponent = () => (
+//   <div>
+//     <h1>Title Component</h1>
+//   </div>
+// );
+
+// const HeadingComponent = () => (
+//   <div className="container">
+//     <TitleComponent />
+//     <TitleComponent></TitleComponent>
+//     <h1>Heading Component</h1>
+//   </div>
+// );
+
+
+const number = 1000;
+
+const title = (
+    <div>
+        <h1> title react element</h1>
+    </div>
+)
+
+const elem = <span>this is span tag element </span>
+
+const HeadingComponent =() => (
+  <div>
+    {title}
+    {elem}
+    <h1>Heading component</h1>
+    <h2>Number: {number}</h2>
+    <h3>Number: {number-1}</h3>
+    <h3>{console.log('console from react compoenent')}</h3>
+   </div>
+)
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<HeadingComponent />);
 
 
 
@@ -44,33 +84,3 @@ root.render(parent);
 
 
 
-
-
-
-
-
-
-
-
-
-// const parent = React.createElement("div", {}, React.createElement("div", {}, React.createElement("h1", {}, "new h1 element")))
-
-
-
-
-
-// const header = React.createElement(
-//     "h1", {
-//         id: "header"
-//     },
-//     "Hello World from React");
-
-// console.log(header);
-// console.log(header.props);
-
-// const root = ReactDOM.createRoot(document.getElementById("root"))
-
-// // root.render(header);
-
-
-// root.render(parent);
