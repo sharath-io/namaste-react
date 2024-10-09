@@ -39,3 +39,22 @@
  - Different dev & prod bundles
  (diff bundle for dev & prod
  there are less optimization on dev build)
+
+
+
+
+ # Namste Food
+Header
+ - logo
+ - nav-items 
+Body 
+  - Search
+  - RestaurantContainer
+    Restaurant card
+    - Img
+    - Name of Res, Star rating, cuisine, delivery time, price
+Footer
+  - Copyright
+  - Links
+  - Address
+  - Contact
