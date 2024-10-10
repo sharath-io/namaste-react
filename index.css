@@ -29,7 +29,7 @@
 }
 
 .res-card{
-    width: 200px;
+    width: 300px;
     border-radius: 10px;
     padding: 6px;
 }
@@ -50,10 +50,11 @@
 }
 
 .res-container{
-    display: flex;
-    gap: 2rem;
+    display: flex;  
+    gap: 0.5rem;
     /* justify-content: space-between; */
     flex-wrap: wrap;
+    margin:0 1%
 }
 
 .filter-btn{
@@ -63,4 +64,25 @@
     background-color: orange;
     font-size: 1rem;
     font-weight: bold;
+}
+
+.res-card > *{
+    margin-top: 0.4rem;
+}
+
+
+
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.shimmer-card{
+    width: 200px;
+    height: 400px;
+    margin: 20px;
+    background-color: #f0f0f0;
+   
 }

@@ -1,7 +1,7 @@
 import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = ({ resData }) => {
-  console.log('here',resData)
+  console.log('answers data:',resData?.info)
   const {
     id,
     cloudinaryImageId,
@@ -10,9 +10,9 @@ const RestaurantCard = ({ resData }) => {
     avgRating,
     deliveryTime,
     costForTwo,
-  } = resData?.data;
+  } = resData?.info;
   return (
-    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }} key={id}>
+    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
       <img
         className="res-logo"
         alt="res-logo"
@@ -22,7 +22,7 @@ const RestaurantCard = ({ resData }) => {
       <h4>{cuisines.join(", ")}</h4>
       <h4>{avgRating}</h4>
       <h4>{deliveryTime} minutes</h4>
-      <h4>{costForTwo / 100}</h4>
+      <h4>{costForTwo}</h4>
     </div>
   );
 };
