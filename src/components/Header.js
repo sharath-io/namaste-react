@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -6,28 +6,31 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
 
-
-  useEffect(() => {
-    console.log("useEffect called")
-  })
-
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+    <div className="flex justify-between mb-10 shadow-lg	">
+      <div>
+        <img className="w-28" src={LOGO_URL} />
       </div>
 
-      <div className="nav-items">
-        <ul>
-          <li>Online Status : {onlineStatus ? "✅" : "🔴"}</li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li>Cart</li>
+      <div className="flex items-center">
+        <ul className="flex m-5 font-semibold	text-lg	">
+          <li className="px-8 my-2">
+            Online Status : {onlineStatus ? "✅" : "🔴"}
+          </li>
+          <li className="px-8 my-2">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="px-8 my-2">
+            <Link to="/about">About Us</Link>
+          </li>
+          <li className="px-8 my-2">
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li className="px-8 my-2">Cart</li>
           <button
-          className="btn"
+            className="bg-orange-400 px-8 py-2 rounded-md"
             onClick={() =>
               setBtnName((btnName) =>
                 btnName === "Login" ? "Logout" : "Login"
