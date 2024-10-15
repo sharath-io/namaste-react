@@ -12,14 +12,9 @@ const Body = () => {
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4400802&lng=78.3489168&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     const dataJSON = await data.json();
 
-    console.log('for all restaurants: ', dataJSON)
-    console.log('coming....', dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-
-    
     setListOfRestaurants(dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
-    setFilteredListR(dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-     
+    setFilteredListR(dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);   
   };  
 
   useEffect(() => {
