@@ -39,8 +39,8 @@ const Body = () => {
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
-    <div>
-      <div className="flex justify-center items-center gap-8 m-5">
+    <div className="mx-5 mt-10">
+      <div className="flex justify-center gap-10 mx-auto">
 
         <input
           type="text"
@@ -77,7 +77,7 @@ const Body = () => {
       </div>
 
 
-      <div className="m-5 p-5 flex gap-10 bg-red-400">
+      <div className="flex flex-wrap gap-2 justify-center mt-5">
         {filteredListR?.map((restaurant) => {
           return (
             <Link

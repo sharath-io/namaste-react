@@ -16,19 +16,19 @@ const Header = () => {
 
       <div className="flex items-center">
         <ul className="flex m-5 font-semibold	text-lg	">
-          <li className="px-8 my-2">
+          <li className="px-8 my-2 hover:text-orange-400 cursor-pointer">
             Online Status : {onlineStatus ? "✅" : "🔴"}
           </li>
-          <li className="px-8 my-2">
+          <li className="px-8 my-2 hover:text-orange-400">
             <Link to="/">Home</Link>
           </li>
-          <li className="px-8 my-2">
+          <li className="px-8 my-2 hover:text-orange-400">
             <Link to="/about">About Us</Link>
           </li>
-          <li className="px-8 my-2">
+          <li className="px-8 my-2 hover:text-orange-400">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="px-8 my-2">Cart</li>
+          <li className="px-8 my-2 hover:text-orange-400 cursor-pointer">Cart</li>
           <button
             className="bg-orange-400 px-8 py-2 rounded-md"
             onClick={() =>
