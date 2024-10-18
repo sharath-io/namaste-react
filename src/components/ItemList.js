@@ -1,4 +1,5 @@
-const ItemList = ({ data }) => {
+const ItemList = ({ data, dummy }) => {
+  console.log('Items list console : ', dummy)
 
   return (
     <div

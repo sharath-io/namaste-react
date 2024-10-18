@@ -1,6 +1,6 @@
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({ data, showItems, show }) => {
+const RestaurantCategory = ({ data, showItems, show,dummy }) => {
   // const [showItems, setShowItems] = useState(false);
   // const handleClick = () => setShowItems(!showItems);
   // lifted the state up => to nearest parent => RestaurantMenu
@@ -16,7 +16,7 @@ const RestaurantCategory = ({ data, showItems, show }) => {
       <ul>
         {data?.itemCards?.map((item) => (
           <li key={item?.card?.info?.id}>
-            {showItems && <ItemList data={item?.card?.info} />}
+            {showItems && <ItemList data={item?.card?.info} dummy={dummy} />}
           </li>
         ))}
       </ul>

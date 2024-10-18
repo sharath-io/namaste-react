@@ -7,6 +7,9 @@ import { useState } from "react";
 const RestaurantMenu = () => {
   const { resId } = useParams();
 
+
+  const dummy = "Dummy";
+
   const [activeIndex, setActiveIndex] = useState(null);
 
   const resInfo = useRestaurantMenu(resId);
@@ -53,6 +56,7 @@ const RestaurantMenu = () => {
                 show={() =>
                   setActiveIndex(() => (activeIndex === index ? null : index))
                 }
+                dummy={dummy}
               />
             </li>
           ))}
